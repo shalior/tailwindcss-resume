@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./favicon.png" />
+    <meta name="viewport" content="width=device-width" />
+
+    <style>
+        /*
+! tailwindcss v3.2.4 | MIT License | https://tailwindcss.com
+*/
+        /*
+1. Prevent padding and border from affecting element width. (https://github.com/mozdevs/cssremedy/issues/4)
+2. Allow adding a border to an element by just adding a border-width. (https://github.com/tailwindcss/tailwindcss/pull/116)
+*/
+
+        *,
+        ::before,
+        ::after {
+            box-sizing: border-box;
+            /* 1 */
+            border-width: 0;
+            /* 2 */
+            border-style: solid;
+            /* 2 */
+            border-color: #e5e7eb;
+            /* 2 */
+        }
+
+        ::before,
+        ::after {
+            --tw-content: '';
+        }
+
+        /*
+1. Use a consistent sensible line-height in all browsers.
+2. Prevent adjustments of font size after orientation changes in iOS.
+3. Use a more readable tab size.
+4. Use the user's configured `sans` font-family by default.
+5. Use the user's configured `sans` font-feature-settings by default.
+*/
+
+        html {
+            line-height: 1.5;
+            /* 1 */
+            -webkit-text-size-adjust: 100%;
+            /* 2 */
+            -moz-tab-size: 4;
+            /* 3 */
+            -o-tab-size: 4;
+            tab-size: 4;
+            /* 3 */
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            /* 4 */
+            font-feature-settings: normal;
+            /* 5 */
+        }
+
+        /*
+1. Remove the margin in all browsers.
+2. Inherit line-height from `html` so users can set them as a class directly on the `html` element.
+*/
+
+        body {
+            margin: 0;
+            /* 1 */
+            line-height: inherit;
+            /* 2 */
+        }
+
+        /*
+1. Add the correct height in Firefox.
+2. Correct the inheritance of border color in Firefox. (https://bugzilla.mozilla.org/show_bug.cgi?id=190655)
+3. Ensure horizontal rules are visible by default.
+*/
+
+        hr {
+            height: 0;
+            /* 1 */
+            color: inherit;
+            /* 2 */
+            border-top-width: 1px;
+            /* 3 */
+        }
+
+        /*
+Add the correct text decoration in Chrome, Edge, and Safari.
+*/
+
+        abbr:where([title]) {
+            -webkit-text-decoration: underline dotted;
+            text-decoration: underline dotted;
+        }
+
+        /*
+Remove the default font size and weight for headings.
+*/
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: inherit;
+            font-weight: inherit;
+        }
+
+        /*
+Reset links to optimize for opt-in styling instead of opt-out.
+*/
+
+        a {
+            color: inherit;
+            text-decoration: inherit;
+        }
+
+        /*
+Add the correct font weight in Edge and Safari.
+*/
+
+        b,
+        strong {
+            font-weight: bolder;
+        }
+
+        /*
+1. Use the user's configured `mono` font family by default.
+2. Correct the odd `em` font sizing in all browsers.
+*/
+
+        code,
+        kbd,
+        samp,
+        pre {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            /* 1 */
+            font-size: 1em;
+            /* 2 */
+        }
+
+        /*
+Add the correct font size in all browsers.
+*/
+
+        small {
+            font-size: 80%;
+        }
+
+        /*
+Prevent `sub` and `sup` elements from affecting the line height in all browsers.
+*/
+
+        sub,
+        sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline;
+        }
+
+        sub {
+            bottom: -0.25em;
+        }
+
+        sup {
+            top: -0.5em;
+        }
+
+        /*
+1. Remove text indentation from table contents in Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=999088, https://bugs.webkit.org/show_bug.cgi?id=201297)
+2. Correct table border color inheritance in all Chrome and Safari. (https://bugs.chromium.org/p/chromium/issues/detail?id=935729, https://bugs.webkit.org/show_bug.cgi?id=195016)
+3. Remove gaps between table borders by default.
+*/
+
+        table {
+            text-indent: 0;
+            /* 1 */
+            border-color: inherit;
+            /* 2 */
+            border-collapse: collapse;
+            /* 3 */
+        }
+
+        /*
+1. Change the font styles in all browsers.
+2. Remove the margin in Firefox and Safari.
+3. Remove default padding in all browsers.
+*/
+
+        button,
+        input,
+        optgroup,
+        select,
+        textarea {
+            font-family: inherit;
+            /* 1 */
+            font-size: 100%;
+            /* 1 */
+            font-weight: inherit;
+            /* 1 */
+            line-height: inherit;
+            /* 1 */
+            color: inherit;
+            /* 1 */
+            margin: 0;
+            /* 2 */
+            padding: 0;
+            /* 3 */
+        }
+
+        /*
+Remove the inheritance of text transform in Edge and Firefox.
+*/
+
+        button,
+        select {
+            text-transform: none;
+        }
+
+        /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Remove default button styles.
+*/
+
+        button,
+        [type='button'],
+        [type='reset'],
+        [type='submit'] {
+            -webkit-appearance: button;
+            /* 1 */
+            background-color: transparent;
+            /* 2 */
+            background-image: none;
+            /* 2 */
+        }
+
+        /*
+Use the modern Firefox focus style for all focusable elements.
+*/
+
+        :-moz-focusring {
+            outline: auto;
+        }
+
+        /*
+Remove the additional `:invalid` styles in Firefox. (https://github.com/mozilla/gecko-dev/blob/2f9eacd9d3d995c937b4251a5557d95d494c9be1/layout/style/res/forms.css#L728-L737)
+*/
+
+        :-moz-ui-invalid {
+            box-shadow: none;
+        }
+
+        /*
+Add the correct vertical alignment in Chrome and Firefox.
+*/
+
+        progress {
+            vertical-align: baseline;
+        }
+
+        /*
+Correct the cursor style of increment and decrement buttons in Safari.
+*/
+
+        ::-webkit-inner-spin-button,
+        ::-webkit-outer-spin-button {
+            height: auto;
+        }
+
+        /*
+1. Correct the odd appearance in Chrome and Safari.
+2. Correct the outline style in Safari.
+*/
+
+        [type='search'] {
+            -webkit-appearance: textfield;
+            /* 1 */
+            outline-offset: -2px;
+            /* 2 */
+        }
+
+        /*
+Remove the inner padding in Chrome and Safari on macOS.
+*/
+
+        ::-webkit-search-decoration {
+            -webkit-appearance: none;
+        }
+
+        /*
+1. Correct the inability to style clickable types in iOS and Safari.
+2. Change font properties to `inherit` in Safari.
+*/
+
+        ::-webkit-file-upload-button {
+            -webkit-appearance: button;
+            /* 1 */
+            font: inherit;
+            /* 2 */
+        }
+
+        /*
+Add the correct display in Chrome and Safari.
+*/
+
+        summary {
+            display: list-item;
+        }
+
+        /*
+Removes the default spacing and border for appropriate elements.
+*/
+
+        blockquote,
+        dl,
+        dd,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        hr,
+        figure,
+        p,
+        pre {
+            margin: 0;
+        }
+
+        fieldset {
+            margin: 0;
+            padding: 0;
+        }
+
+        legend {
+            padding: 0;
+        }
+
+        ol,
+        ul,
+        menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        /*
+Prevent resizing textareas horizontally by default.
+*/
+
+        textarea {
+            resize: vertical;
+        }
+
+        /*
+1. Reset the default placeholder opacity in Firefox. (https://github.com/tailwindlabs/tailwindcss/issues/3300)
+2. Set the default placeholder color to the user's configured gray 400 color.
+*/
+
+        input::-moz-placeholder,
+        textarea::-moz-placeholder {
+            opacity: 1;
+            /* 1 */
+            color: #9ca3af;
+            /* 2 */
+        }
+
+        input::placeholder,
+        textarea::placeholder {
+            opacity: 1;
+            /* 1 */
+            color: #9ca3af;
+            /* 2 */
+        }
+
+        /*
+Set the default cursor for buttons.
+*/
+
+        button,
+        [role="button"] {
+            cursor: pointer;
+        }
+
+        /*
+Make sure disabled buttons don't get the pointer cursor.
+*/
+        :disabled {
+            cursor: default;
+        }
+
+        /*
+1. Make replaced elements `display: block` by default. (https://github.com/mozdevs/cssremedy/issues/14)
+2. Add `vertical-align: middle` to align replaced elements more sensibly by default. (https://github.com/jensimmons/cssremedy/issues/14#issuecomment-634934210)
+   This can trigger a poorly considered lint error in some tools but is included by design.
+*/
+
+        img,
+        svg,
+        video,
+        canvas,
+        audio,
+        iframe,
+        embed,
+        object {
+            display: block;
+            /* 1 */
+            vertical-align: middle;
+            /* 2 */
+        }
+
+        /*
+Constrain images and videos to the parent width and preserve their intrinsic aspect ratio. (https://github.com/mozdevs/cssremedy/issues/14)
+*/
+
+        img,
+        video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Make elements with the HTML hidden attribute stay hidden by default */
+        [hidden] {
+            display: none;
+        }
+
+        *,
+        ::before,
+        ::after {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+        }
+
+        ::backdrop {
+            --tw-border-spacing-x: 0;
+            --tw-border-spacing-y: 0;
+            --tw-translate-x: 0;
+            --tw-translate-y: 0;
+            --tw-rotate: 0;
+            --tw-skew-x: 0;
+            --tw-skew-y: 0;
+            --tw-scale-x: 1;
+            --tw-scale-y: 1;
+            --tw-pan-x: ;
+            --tw-pan-y: ;
+            --tw-pinch-zoom: ;
+            --tw-scroll-snap-strictness: proximity;
+            --tw-ordinal: ;
+            --tw-slashed-zero: ;
+            --tw-numeric-figure: ;
+            --tw-numeric-spacing: ;
+            --tw-numeric-fraction: ;
+            --tw-ring-inset: ;
+            --tw-ring-offset-width: 0px;
+            --tw-ring-offset-color: #fff;
+            --tw-ring-color: rgb(59 130 246 / 0.5);
+            --tw-ring-offset-shadow: 0 0 #0000;
+            --tw-ring-shadow: 0 0 #0000;
+            --tw-shadow: 0 0 #0000;
+            --tw-shadow-colored: 0 0 #0000;
+            --tw-blur: ;
+            --tw-brightness: ;
+            --tw-contrast: ;
+            --tw-grayscale: ;
+            --tw-hue-rotate: ;
+            --tw-invert: ;
+            --tw-saturate: ;
+            --tw-sepia: ;
+            --tw-drop-shadow: ;
+            --tw-backdrop-blur: ;
+            --tw-backdrop-brightness: ;
+            --tw-backdrop-contrast: ;
+            --tw-backdrop-grayscale: ;
+            --tw-backdrop-hue-rotate: ;
+            --tw-backdrop-invert: ;
+            --tw-backdrop-opacity: ;
+            --tw-backdrop-saturate: ;
+            --tw-backdrop-sepia: ;
+        }
+
+        .col-span-5 {
+            grid-column: span 5 / span 5;
+        }
+
+        .col-span-2 {
+            grid-column: span 2 / span 2;
+        }
+
+        .my-6 {
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .my-4 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .mt-2 {
+            margin-top: 0.5rem;
+        }
+
+        .mt-6 {
+            margin-top: 1.5rem;
+        }
+
+        .mr-4 {
+            margin-right: 1rem;
+        }
+
+        .mb-3 {
+            margin-bottom: 0.75rem;
+        }
+
+        .mt-4 {
+            margin-top: 1rem;
+        }
+
+        .mr-2 {
+            margin-right: 0.5rem;
+        }
+
+        .mt-1 {
+            margin-top: 0.25rem;
+        }
+
+        .flex {
+            display: flex;
+        }
+
+        .inline-flex {
+            display: inline-flex;
+        }
+
+        .grid {
+            display: grid;
+        }
+
+        .contents {
+            display: contents;
+        }
+
+        .h-8 {
+            height: 2rem;
+        }
+
+        .grid-cols-7 {
+            grid-template-columns: repeat(7, minmax(0, 1fr));
+        }
+
+        .flex-wrap {
+            flex-wrap: wrap;
+        }
+
+        .items-center {
+            align-items: center;
+        }
+
+        .justify-between {
+            justify-content: space-between;
+        }
+
+        .gap-2 {
+            gap: 0.5rem;
+        }
+
+        .space-y-2> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
+        }
+
+        .space-y-4> :not([hidden])~ :not([hidden]) {
+            --tw-space-y-reverse: 0;
+            margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+            margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+        }
+
+        .space-x-1> :not([hidden])~ :not([hidden]) {
+            --tw-space-x-reverse: 0;
+            margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+            margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+        }
+
+        .p-6 {
+            padding: 1.5rem;
+        }
+
+        .pr-4 {
+            padding-right: 1rem;
+        }
+
+        .pl-2 {
+            padding-left: 0.5rem;
+        }
+
+        .text-justify {
+            text-align: justify;
+        }
+
+        .font-sans {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+
+        .text-5xl {
+            font-size: 3rem;
+            line-height: 1;
+        }
+
+        .text-3xl {
+            font-size: 1.875rem;
+            line-height: 2.25rem;
+        }
+
+        .\!text-3xl {
+            font-size: 1.875rem !important;
+            line-height: 2.25rem !important;
+        }
+
+        .text-sm {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+        }
+
+        .text-xl {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+
+        .\!text-sm {
+            font-size: 0.875rem !important;
+            line-height: 1.25rem !important;
+        }
+
+        .text-xs {
+            font-size: 0.75rem;
+            line-height: 1rem;
+        }
+
+        .\!text-base {
+            font-size: 1rem !important;
+            line-height: 1.5rem !important;
+        }
+
+        .font-bold {
+            font-weight: 700;
+        }
+
+        .font-semibold {
+            font-weight: 600;
+        }
+
+        .text-gray-800 {
+            --tw-text-opacity: 1;
+            color: rgb(31 41 55 / var(--tw-text-opacity));
+        }
+
+        .text-gray-700 {
+            --tw-text-opacity: 1;
+            color: rgb(55 65 81 / var(--tw-text-opacity));
+        }
+
+        .text-stone-700 {
+            --tw-text-opacity: 1;
+            color: rgb(68 64 60 / var(--tw-text-opacity));
+        }
+
+        .text-gray-600 {
+            --tw-text-opacity: 1;
+            color: rgb(75 85 99 / var(--tw-text-opacity));
+        }
+
+        .text-gray-500 {
+            --tw-text-opacity: 1;
+            color: rgb(107 114 128 / var(--tw-text-opacity));
+        }
+
+        .text-gray-400 {
+            --tw-text-opacity: 1;
+            color: rgb(156 163 175 / var(--tw-text-opacity));
+        }
+
+        .text-amber-500 {
+            --tw-text-opacity: 1;
+            color: rgb(245 158 11 / var(--tw-text-opacity));
+        }
+
+        .shadow-sm {
+            --tw-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+            --tw-shadow-colored: 0 1px 2px 0 var(--tw-shadow-color);
+            box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+        }
+
+        .font-calibri.s-y_bCXRrkrYfP {
+            font-family: 'Calibri', sans-serif
+        }
+
+        .s-y_bCXRrkrYfP {}
+    </style>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" class="s-y_bCXRrkrYfP">
+</head>
+
+<body>
+    <div style="display: contents">
+
+
+
+
+        <div class="p-6 font-sans text-gray-800 font-calibri s-y_bCXRrkrYfP" style="width: 210mm; height: 297mm">
+            <div class="grid grid-cols-7 s-y_bCXRrkrYfP">
+                <main class="col-span-5 pr-4 s-y_bCXRrkrYfP">
+                    <header class="s-y_bCXRrkrYfP">
+                        <h1 class="text-5xl font-bold s-y_bCXRrkrYfP">Jhon Doe</h1>
+                        <p class="text-gray-700 mt-2 s-y_bCXRrkrYfP">Full stack developer</p>
+                    </header>
+
+                    <section class="mt-6 s-y_bCXRrkrYfP">
+                        <h1 class="text-3xl inline-flex items-center s-y_bCXRrkrYfP"><i
+                                class="material-icons !text-3xl text-stone-700 mr-4 s-y_bCXRrkrYfP">person</i>
+                            About me
+                        </h1>
+
+                        <p class="text-gray-700 mt-2 prose text-justify s-y_bCXRrkrYfP">Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Iste doloribus veritatis
+                            blanditiis excepturi omnis necessitatibus hic. Fugit reprehenderit a quam distinctio ex,
+                            ratione ducimus iusto quos ad, non, architecto voluptatem!
+                        </p>
+                    </section>
+
+                    <hr class="my-6 shadow-sm s-y_bCXRrkrYfP">
+
+                    <section class="s-y_bCXRrkrYfP">
+                        <h1 class="text-3xl inline-flex items-center s-y_bCXRrkrYfP"><i
+                                class="material-icons !text-3xl text-stone-700 mr-4 s-y_bCXRrkrYfP">history</i>
+                            Experiences
+                        </h1>
+
+                        <div class="pl-2 mt-4">
+                            <h1 class="role text-xl text-gray-800 font-bold inline-flex items-center"><i
+                                    class="material-icons !text-sm text-gray-500 mr-2">circle</i>
+                                Full-Stack developer</h1>
+
+                            <div class="meta text-gray-700 mt-1 flex justify-between text-xs">
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">apartment</i>
+                                    <span>Example.company</span>
+                                </p>
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">location_on</i>
+                                    <span>Remote</span>
+                                </p>
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">date_range</i>
+                                    <span>Apr 2293 - Present</span>
+                                </p>
+                            </div>
+
+                            <div class="description text-gray-700 mt-2">
+                                <p class="prose text-justify text-sm text-gray-600 s-y_bCXRrkrYfP">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Iste doloribus veritatis
+                                    blanditiis excepturi omnis necessitatibus hic. Fugit reprehenderit a quam distinctio
+                                    ex,
+                                    ratione ducimus iusto quos ad, non, architecto voluptatem!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pl-2 mt-4">
+                            <h1 class="role text-xl text-gray-800 font-bold inline-flex items-center"><i
+                                    class="material-icons !text-sm text-gray-500 mr-2">circle</i>
+                                Full-Stack developer</h1>
+
+                            <div class="meta text-gray-700 mt-1 flex justify-between text-xs">
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">apartment</i>
+                                    <span>Example.company</span>
+                                </p>
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">location_on</i>
+                                    <span>Remote</span>
+                                </p>
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">date_range</i>
+                                    <span>Apr 2293 - Present</span>
+                                </p>
+                            </div>
+
+                            <div class="description text-gray-700 mt-2">
+                                <p class="prose text-justify text-sm text-gray-600 s-y_bCXRrkrYfP">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Iste doloribus veritatis
+                                    blanditiis excepturi omnis necessitatibus hic. Fugit reprehenderit a quam distinctio
+                                    ex,
+                                    ratione ducimus iusto quos ad, non, architecto voluptatem!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pl-2 mt-4">
+                            <h1 class="role text-xl text-gray-800 font-bold inline-flex items-center"><i
+                                    class="material-icons !text-sm text-gray-500 mr-2">circle</i>
+                                Full-Stack developer</h1>
+
+                            <div class="meta text-gray-700 mt-1 flex justify-between text-xs">
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">apartment</i>
+                                    <span>Example.company</span>
+                                </p>
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">location_on</i>
+                                    <span>Remote</span>
+                                </p>
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">date_range</i>
+                                    <span>Apr 2293 - Present</span>
+                                </p>
+                            </div>
+
+                            <div class="description text-gray-700 mt-2">
+                                <p class="prose text-justify text-sm text-gray-600 s-y_bCXRrkrYfP">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Iste doloribus veritatis
+                                    blanditiis excepturi omnis necessitatibus hic. Fugit reprehenderit a quam distinctio
+                                    ex,
+                                    ratione ducimus iusto quos ad, non, architecto voluptatem!
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="pl-2 mt-4">
+                            <h1 class="role text-xl text-gray-800 font-bold inline-flex items-center"><i
+                                    class="material-icons !text-sm text-gray-500 mr-2">circle</i>
+                                Freelancer</h1>
+
+                            <div class="meta text-gray-700 mt-1 flex justify-between text-xs">
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">location_on</i>
+                                    <span>Remote</span>
+                                </p>
+
+                                <p class="inline-flex items-center"><i
+                                        class="material-icons !text-base text-gray-500 mr-2">date_range</i>
+                                    <span>Jan 1444 - Oct 1245</span>
+                                </p>
+                            </div>
+
+                            <div class="description text-gray-700 mt-2">
+                                <p class="prose text-justify text-sm text-gray-600 s-y_bCXRrkrYfP">Lorem ipsum dolor sit
+                                    amet consectetur, adipisicing elit. Iste doloribus veritatis
+                                    blanditiis excepturi omnis necessitatibus hic. Fugit reprehenderit a quam distinctio
+                                    ex,
+                                    ratione ducimus iusto quos ad, non, architecto voluptatem!
+                                </p>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <aside class="col-span-2 s-y_bCXRrkrYfP">
+                    <section class="s-y_bCXRrkrYfP">
+                        <h4 class="text-xl font-semibold mb-3 s-y_bCXRrkrYfP">Personal info</h4>
+
+                        <ul class="space-y-2 text-sm pl-2 s-y_bCXRrkrYfP">
+                            <li class="text-gray-500 s-y_bCXRrkrYfP">Phone: <span
+                                    class="text-gray-700 font-bold s-y_bCXRrkrYfP">00000000000</span></li>
+                            <li class="text-gray-500 s-y_bCXRrkrYfP">Email: <span
+                                    class="text-gray-700 font-bold s-y_bCXRrkrYfP">ali_shalior@proton.me</span></li>
+                            <li class="text-gray-500 s-y_bCXRrkrYfP">Location: <span
+                                    class="text-gray-700 font-bold s-y_bCXRrkrYfP">Earth</span></li>
+                            <li class="text-gray-500 s-y_bCXRrkrYfP">DoB: <span
+                                    class="text-gray-700 font-bold s-y_bCXRrkrYfP">Apr 1880</span></li>
+                            <li class="text-gray-500 s-y_bCXRrkrYfP">Education: <span
+                                    class="text-gray-700 font-bold s-y_bCXRrkrYfP">Bachelor CS</span></li>
+                        </ul>
+                    </section>
+
+                    <hr class="my-4 shadow-sm s-y_bCXRrkrYfP">
+
+                    <section class="s-y_bCXRrkrYfP">
+                        <h4 class="text-xl font-semibold mb-3 s-y_bCXRrkrYfP">Skills</h4>
+
+                        <div class="skills space-y-4 pl-2 s-y_bCXRrkrYfP">
+                            <div class="">
+                                <h6 class="font-bold">JavaScript &amp; TypeScript</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">PHP</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">CI/CD</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">Git and GitHub</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">Test driven development</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">Svelte Kit</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-gray-400">star</i><i
+                                        class="material-icons mt-1 text-gray-400">star</i><i
+                                        class="material-icons mt-1 text-gray-400">star</i><i
+                                        class="material-icons mt-1 text-gray-400">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">TailwindCSS</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">Docker</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-gray-400">star</i></div>
+                            </div>
+                            <div class="">
+                                <h6 class="font-bold">NoSQL</h6>
+
+                                <div class="stars inline-flex space-x-1"><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-amber-500">star</i><i
+                                        class="material-icons mt-1 text-gray-400">star</i><i
+                                        class="material-icons mt-1 text-gray-400">star</i></div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <hr class="my-4 shadow-sm s-y_bCXRrkrYfP">
+
+                    <section class="s-y_bCXRrkrYfP">
+                        <h4 class="text-xl font-semibold mb-3 s-y_bCXRrkrYfP">Links</h4>
+
+                        <ul class="links space-y-2 pl-2 s-y_bCXRrkrYfP">
+                            <li class="inline-flex items-center gap-2 flex-wrap font-bold s-y_bCXRrkrYfP"><svg
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="-3 -3 30 30" class="h-8">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M12 2C6.47715 2 2 6.47715 2 12C2 17.5229 6.47715 22 12 22C17.5229 22 22 17.5229 22 12C22 6.47715 17.5229 2 12 2ZM0 12C0 5.3726 5.3726 0 12 0C18.6274 0 24 5.3726 24 12C24 18.6274 18.6274 24 12 24C5.3726 24 0 18.6274 0 12Z"
+                                        fill="rgba(0,0,0,0.7)" stroke="none" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M9.59162 22.7357C9.49492 22.6109 9.49492 21.4986 9.59162 19.399C8.55572 19.4347 7.90122 19.3628 7.62812 19.1833C7.21852 18.9139 6.80842 18.0833 6.44457 17.4979C6.08072 16.9125 5.27312 16.8199 4.94702 16.6891C4.62091 16.5582 4.53905 16.0247 5.84562 16.4282C7.15222 16.8316 7.21592 17.9303 7.62812 18.1872C8.04032 18.4441 9.02572 18.3317 9.47242 18.1259C9.91907 17.9201 9.88622 17.1538 9.96587 16.8503C10.0666 16.5669 9.71162 16.5041 9.70382 16.5018C9.26777 16.5018 6.97697 16.0036 6.34772 13.7852C5.71852 11.5669 6.52907 10.117 6.96147 9.49369C7.24972 9.07814 7.22422 8.19254 6.88497 6.83679C8.11677 6.67939 9.06732 7.06709 9.73672 7.99999C9.73737 8.00534 10.6143 7.47854 12.0001 7.47854C13.386 7.47854 13.8777 7.90764 14.2571 7.99999C14.6365 8.09234 14.94 6.36699 17.2834 6.83679C16.7942 7.79839 16.3844 8.99999 16.6972 9.49369C17.0099 9.98739 18.2372 11.5573 17.4833 13.7852C16.9807 15.2706 15.9927 16.1761 14.5192 16.5018C14.3502 16.5557 14.2658 16.6427 14.2658 16.7627C14.2658 16.9427 14.4942 16.9624 14.8233 17.8058C15.0426 18.368 15.0585 19.9739 14.8708 22.6234C14.3953 22.7445 14.0254 22.8257 13.7611 22.8673C13.2924 22.9409 12.7835 22.9822 12.2834 22.9982C11.7834 23.0141 11.6098 23.0123 10.9185 22.948C10.4577 22.9051 10.0154 22.8343 9.59162 22.7357Z"
+                                        fill="rgba(0,0,0,0.7)" stroke="none" />
+                                </svg>
+                                GitHub
+                                <a class="text-gray-600 s-y_bCXRrkrYfP"
+                                    href="https://github.com/shalior">https://github.com/shalior</a>
+                            </li>
+                        </ul>
+                    </section>
+                </aside>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
